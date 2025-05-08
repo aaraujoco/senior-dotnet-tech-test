@@ -1,8 +1,4 @@
-﻿using System.Data;
-using AutoFixture;
-using FluentAssertions;
-using Microsoft.Extensions.Logging;
-using Moq;
+﻿using Moq;
 using PropertyManager.Application.Common.Interfaces.Persistence;
 using PropertyManager.Application.Property.Queries;
 using PropertyManager.Domain.Entities;

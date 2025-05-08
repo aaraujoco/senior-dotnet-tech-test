@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using AutoFixture;
-using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using PropertyManager.Application.Common.Interfaces.Persistence;
@@ -55,7 +54,7 @@ namespace PropertyManager.Infrastructure.UnitTest.Persistence.Dapper
             var result = await _sut.GetAllOwnersAsync();
 
             _readRepositoryMock.Verify();
-            result.Should().NotBeNull();
+            Assert.IsNotNull(result);
         }
         [TearDown]
         public void TearDown()
