@@ -14,7 +14,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 
-var allowedHosts = builder.Configuration.GetSection("AllowedHosts").Get<string[]>()!;
 
 builder.Services.AddAutoMapper(typeof(Program));
 

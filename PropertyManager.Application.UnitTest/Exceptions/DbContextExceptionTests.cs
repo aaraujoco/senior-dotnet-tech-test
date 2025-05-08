@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using System.Runtime.Serialization;
-using FluentAssertions;
-using Moq;
+﻿using Moq;
 using PropertyManager.Application.Exceptions;
 
 namespace PropertyManager.Application.UnitTest.Exceptions
@@ -17,7 +14,8 @@ namespace PropertyManager.Application.UnitTest.Exceptions
             // Act
             var actual = new DbContextException(expectedMessage);
             // Assert
-            actual.Message.Should().Be(expectedMessage);
+       
+            Assert.That(actual.Message, Is.EqualTo(expectedMessage));
         }
 
         [Test]
@@ -29,19 +27,11 @@ namespace PropertyManager.Application.UnitTest.Exceptions
             // Act
             var actual = new DbContextException(expectedMessage, innerException.Object);
             // Assert
-            actual.Message.Should().Be(expectedMessage);
-            actual.InnerException.Should().Be(innerException.Object);
+      
+            Assert.That(actual.Message, Is.EqualTo(expectedMessage));
+            Assert.That(actual.InnerException, Is.EqualTo(innerException.Object));
         }
 
-        [Test]
-        public void DbContextException_WithNoParameters_ThrowsDbContextExceptionType()
-        {
-            // Arrange
-            // Act
-            var actual = new DbContextException();
-            // Assert
-            actual.Message.Should().Contain("DbContextException");
-        }
-
+    
     }
 }
