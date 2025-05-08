@@ -24,6 +24,7 @@
             ],
             "UpstreamPathTemplate": "/User/register",
             "UpstreamHttpMethod": [ "POST" ]
+
         },
         {
             "DownstreamPathTemplate": "/api/User/login",
