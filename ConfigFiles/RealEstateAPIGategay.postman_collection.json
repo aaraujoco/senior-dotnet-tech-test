@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "86be369a-8411-4ec3-b3a7-c1f756f260c7",
+		"name": "RealEstateAPIGategay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6776228"
+	},
+	"item": [
+		{
+			"name": "Property | Update Property",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"property\": {\r\n    \"idProperty\": 1,\r\n    \"name\": \"Casa 12\",\r\n    \"address\": \"Melian\",\r\n    \"price\": 100,\r\n    \"codeInternal\": \"string\",\r\n    \"year\": 2015,\r\n    \"idOwner\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/Property",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Property"
+					]
+				},
+				"description": "Update price the property"
+			},
+			"response": []
+		},
+		{
+			"name": "Property | Update Price",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertyPrice\": {\r\n    \"idProperty\": 1,\r\n    \"price\": 95000\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/Property/price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Property",
+						"price"
+					]
+				},
+				"description": "Update price the property"
+			},
+			"response": []
+		},
+		{
+			"name": "Property | Create Property",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"property\": {\r\n    \"name\": \"Casa Property\",\r\n    \"address\": \"TV 45 - 85°85\",\r\n    \"price\": 16000,\r\n    \"codeInternal\": \"string\",\r\n    \"year\": 2010,\r\n    \"idOwner\": 3\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/Property",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Property"
+					]
+				},
+				"description": "Update price the property"
+			},
+			"response": []
+		},
+		{
+			"name": "Property | Find with filter",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"address\": \"\",\r\n  \"price\": 0,\r\n  \"codeInternal\": \"\",\r\n  \"year\": 0,\r\n  \"page\": 1,\r\n  \"size\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/Property/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Property",
+						"find"
+					]
+				},
+				"description": "Update price the property"
+			},
+			"response": []
+		},
+		{
+			"name": "Owner | Create Owner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"owner\": {\r\n    \"name\": \"Maria Paula\",\r\n    \"address\": \"Street Fail 45\",\r\n    \"photo\": \"\",\r\n    \"birthday\": \"1985-05-05\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/Owner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Owner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security | User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vonealmar@gmail.com\",\r\n  \"password\": \"A12887b*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/User/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"User",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security | Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vonealmar@gmail.com\",\r\n  \"password\": \"A12887b*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/User/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security | Get Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5033/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Property | Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "propertyImage.IdProperty",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "propertyImage.File",
+							"type": "file",
+							"src": "/C:/Users/USER/OneDrive/Imágenes/Screenshots/image.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5033/Property/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"Property",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Property Trace | Find By IdProperty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProperty\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/PropertyTrace/find_by",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"PropertyTrace",
+						"find_by"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Property Trace | Create Property Trace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertyTrace\": {\r\n    \"dateSale\": \"2025-05-08\",\r\n    \"name\": \"Trace\",\r\n    \"value\": 15000,\r\n    \"tax\": 120,\r\n    \"idProperty\": 10\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5033/PropertyTrace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5033",
+					"path": [
+						"PropertyTrace"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
